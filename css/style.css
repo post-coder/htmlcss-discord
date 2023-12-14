@@ -6,10 +6,27 @@
 /* reset */
 
 
+
+/* font */
+@font-face {
+    font-family: 'Whitney';
+    src: url('../fonts/whitneymedium.otf');
+}
+@font-face {
+    font-family: 'Whitney Bold';
+    src: url('../fonts/whitneybold.otf');
+}
+
+
+
+body {
+    font-family: 'Whitney', sans-serif;
+    line-height: 1.4em;
+}
+
+
 /* i container hanno una dimensione fissa,  centrati orizzontalmente */
 .container {
-    border: dashed 2px black;
-    /* test */
 
     max-width: 1000px;
     margin-left: auto;
@@ -18,8 +35,6 @@
 }
 
 .container-small {
-    background-color: #ee82ee;
-    /* test */
 
     max-width: 800px;
 
@@ -29,7 +44,7 @@
 
 
 header, section {
-    padding: 40px 20px;
+    padding: 110px 20px 160px;
 }
 
 
@@ -38,48 +53,86 @@ header, section {
 }
 
 
+/* pulsanti */
+.btn {
+    display: flex;
+    /* regole che stilizzano correttamente in caso sia presente un'icona */
+    gap: 1em;
+    align-items: flex-end;
+
+    padding: 18px 28px;
+
+    border-radius: 29px;
+
+    background-color: white;
+    color: #23272a;
+
+    font-size: 1.1em;
+}
+
+
+
+
+
+.btn-small {
+    padding: 10px 16px;
+
+    border-radius: 18px;
+}
+
+.btn-dark {
+    background-color: #23272a;
+    color: white;
+}
+
+
+/* fine pulsanti */
+
+
 
 
 /* sezione navbar */
 nav {
-    background-color: #add8e6;
-    /* test */
-    padding: 10px ;
+    padding: 20px ;
+
+    background-color: #3161e0;
 }
 
 nav .container > * {
-    border: dashed 2px black;
-    /* test */
-
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 nav .container {
-    background-color: #daa520;
-    /* test */
-
     display: flex;
+    align-items: center;
 
 }
 
 nav .logo {
-    width: 100px;
+    padding-top: 8px;
 }
 
 
 nav .nav-links {
+
     flex-grow: 1;
 }
+
+
 nav .nav-links ul {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    gap: 12px;
+    gap: 28px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
 }
 
 
 nav .login {
-    width: 100px;
     text-align: right;
 }
 /* fine sezione navbar */
@@ -88,13 +141,32 @@ nav .login {
 
 /* sezione hero */
 #hero {
-    background-color: #00008b;
-    /* test */
+    background-image: url('../img/jumbo.png');
+    background-size: cover;
+    background-position: center;
 }
 
 #hero .container-small {
-    height: 300px;
-    /* test */
+    text-align: center;
+    color: white;
+
+}
+
+#hero .container-small h1 {
+    margin-bottom: 34px;
+    
+    font-size: 36px;
+}
+
+#hero .container-small p {
+    margin-bottom: 20px;
+}
+
+
+#hero .container-small .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
 }
 
 
