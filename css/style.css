@@ -11,10 +11,12 @@
 @font-face {
     font-family: 'Whitney';
     src: url('../fonts/whitneymedium.otf');
+    font-style: 'normal';
 }
 @font-face {
     font-family: 'Whitney Bold';
     src: url('../fonts/whitneybold.otf');
+    font-weight: 'bold';
 }
 
 
@@ -43,13 +45,27 @@ body {
 }
 
 
-header, section {
+header {
     padding: 0 20px 160px;
 }
 
+/* sezioni */
+section {
+    padding: 110px 20px;
+}
+
+section h2 {
+    font-size: 34px;
+    line-height: 1.3em;
+    margin-bottom: 1em;
+
+    font-family: 'Whitney Bold';
+}
+/* fine sezioni */
+
 
 .bg-gray {
-    background-color: #d3d3d3;
+    background-color: #f6f6f6;
 }
 
 
@@ -72,13 +88,21 @@ header, section {
 }
 
 
-
-
-
 .btn-small {
     padding: 10px 16px;
 
     border-radius: 18px;
+}
+
+.btn-medium {
+    align-items: center;
+
+    padding: 8px 20px;
+
+    background-color: #8ea1e1;
+    color: white;
+
+    font-size: 0.8em;
 }
 
 .btn-dark {
@@ -178,33 +202,52 @@ nav .login {
 /* sezioni grigie */
 .row {
     display: flex;
+    gap: 100px;
 }
 
+
 .column-big {
-    background-color: #1e90ff;
-    height: 400px;
-    border: dashed 2px black;
-    /* test */
 
     /* width: 60%; */
     flex-grow: 1;
 }
 
-.column-small {
-    background-color: #ffc0cb;
-    height: 400px;
-    border: dashed 2px black;
-    /* test */
-
-    /* width: 40%; */
-    width: 400px;
+.column-big img {
+    width: 100%;
 }
 
 
+.column-small {
+    width: 400px;
+
+    padding-top: 20px;
+}
+
+
+
+
+
+
 .big-content {
-    background-color: #228b22;
-    height: 600px;
-    /* test */
+    text-align: center;
+}
+
+.big-content .cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.big-content .cta .cta-text {
+
+    padding: 18px 40px 38px;
+
+    background-image: url('../img/stars.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    font-size: 1.4em;
+    font-family: 'Whitney Bold', sans-serif;
 }
 /* fine sezioni grigie */
 
