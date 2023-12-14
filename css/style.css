@@ -214,6 +214,9 @@ nav .login {
 /* sezioni grigie */
 .row {
     display: flex;
+}
+
+section .row {
     gap: 100px;
 }
 
@@ -298,6 +301,7 @@ footer #footer-top h2 {
 
 footer #footer-top .footer-links {
     width: 250px;
+    margin-right: 100px;
 }
 
 footer #footer-top .language-selector {
